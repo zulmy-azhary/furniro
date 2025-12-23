@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { Input } from '@/components/ui/input';
+	import { Button } from '@/components/ui/button';
+
 	const footers = [
 		{
 			title: 'Links',
@@ -16,16 +19,12 @@
 				{ name: 'Returns', href: '/' },
 				{ name: 'Privacy Policies', href: '/' }
 			]
-		},
-		{
-			title: 'Newsletter',
-			navs: []
 		}
 	];
 </script>
 
 <footer class="border-t border-gray-300 flex flex-col items-center w-full px-4 2xl:px-24">
-	<div class="container grid grid-cols-2 my-24 gap-y-[85px] md:grid-cols-3 xl:grid-cols-5 xl:my-12">
+	<div class="container grid grid-cols-2 my-24 gap-y-[85px] md:grid-cols-4 xl:grid-cols-6 xl:my-12">
 		<div class="flex flex-col col-span-full xl:col-span-2 gap-y-10">
 			<div class="">
 				<h3 class="font-[Montserrat] font-bold text-2xl">Furniro.</h3>
@@ -41,7 +40,7 @@
 			</div>
 		</div>
 		{#each footers as footer}
-			<div class="space-y-14">
+			<div class="space-y-14 md:col-span-1 lg:col-span-1">
 				<h4 class="text-gray-400 tracking-wide font-medium">{footer.title}</h4>
 				<ul class="flex flex-col gap-y-10">
 					{#each footer.navs as nav}
@@ -55,6 +54,21 @@
 				</ul>
 			</div>
 		{/each}
+
+		<!-- Newsletter -->
+		<div class="col-span-2 md:col-span-2 xl:col-span-2 space-y-14">
+			<h4 class="text-gray-400 tracking-wide font-medium">Newsletter</h4>
+			<div class="flex w-full max-w-sm items-center gap-2">
+				<Input type="email" placeholder="Enter Your Email Address" class="tracking-wide" />
+				<Button
+					type="submit"
+					variant="outline"
+					class="rounded-md border font-medium border-input hover:bg-transparent text-muted-foreground"
+				>
+					Subscribe
+				</Button>
+			</div>
+		</div>
 	</div>
 	<div
 		class="container flex flex-col items-center justify-between py-6 border-t border-gray-300 gap-y-6 md:flex-row lg:py-9"
