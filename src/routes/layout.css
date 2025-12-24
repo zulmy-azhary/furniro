@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+img {
+  user-select: none;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -127,6 +131,7 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   font-family: 'Poppins';
 }
