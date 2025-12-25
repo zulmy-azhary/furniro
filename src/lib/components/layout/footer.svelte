@@ -62,7 +62,7 @@
 				<Input
 					type="email"
 					placeholder="Enter Your Email Address"
-					class="tracking-wide px-3 py-1.5 rounded-none border-0 border-b border-input focus-visible:ring-0"
+					class="tracking-wide px-3 py-1.5 rounded-none border-0 border-b border-input focus-visible:ring-0 shadow-none"
 				/>
 				<Button
 					type="submit"
