@@ -59,11 +59,15 @@
 		<div class="col-span-2 md:col-span-2 xl:col-span-2 space-y-14">
 			<h4 class="text-gray-400 tracking-wide font-medium">Newsletter</h4>
 			<div class="flex w-full max-w-sm items-center gap-2">
-				<Input type="email" placeholder="Enter Your Email Address" class="tracking-wide" />
+				<Input
+					type="email"
+					placeholder="Enter Your Email Address"
+					class="tracking-wide px-3 py-1.5 rounded-none border-0 border-b border-input focus-visible:ring-0"
+				/>
 				<Button
 					type="submit"
-					variant="outline"
-					class="rounded-md border font-medium border-input hover:bg-transparent text-muted-foreground"
+					variant="link"
+					class="font-normal uppercase text-slate-700 font-[Poppins]"
 				>
 					Subscribe
 				</Button>
